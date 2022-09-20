@@ -214,7 +214,7 @@ public void tableConnection(){
     @FXML
     private void imprimer(ActionEvent event) {
         JasperReport jReport;
-        String path = ".C:\\Users\\saife\\Desktop\\Nouveau dossier (4)\\projectfinal\\src\\edu\\tasta\\gui\\report1.jasper";
+        String path = ".src\\edu\\tasta\\gui\\report1.jasper";
         try {
             jReport = (JasperReport) JRLoader.loadObjectFromFile(path);
             JasperPrint jprint = JasperFillManager.fillReport(path, null, con);
