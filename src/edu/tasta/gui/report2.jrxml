@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8149c78-b0e9-4455-9aee-5007f207616f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[CALL `order_list`]]>
+	</queryString>
+	<field name="order_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="menu_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="payment_type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String"/>
+	<field name="Qnt" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="266" y="15" width="205" height="64" uuid="6444fa56-aa35-430c-aa2e-9f09acf74a64"/>
+				<textElement textAlignment="Justified">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Orders List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="d8e39046-b6e9-4d7b-8cd4-54b55c96961f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[order_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="34617ff6-4894-4928-9324-64899f5e77e8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[customer_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="89a1dbdf-b86d-4ba3-95e2-d2fc2ed7789b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[menu_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="0" width="100" height="20" uuid="a1826ed5-2b92-4edf-8218-9f58df3d8832"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[payment_type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="571" y="2" width="186" height="18" uuid="eb4745e5-d152-4d47-95d8-85464ed9c568"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="100" height="20" uuid="ca9284af-59a5-4620-87e6-0d8cc28c5911"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Qnt]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="29" width="100" height="20" uuid="9b252372-cfe8-4b11-bf19-d4b7ec84da29"/>
+				<textFieldExpression><![CDATA[$F{order_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="29" width="100" height="20" uuid="6146f89e-2cf4-435d-b967-7e8d29e5fd04"/>
+				<textFieldExpression><![CDATA[$F{customer_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="29" width="100" height="20" uuid="ef645f1c-94ae-44c0-b86f-8c515831970b"/>
+				<textFieldExpression><![CDATA[$F{menu_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="29" width="100" height="20" uuid="5300f48d-77b4-4e9e-83d7-92c1a96c0e4e"/>
+				<textFieldExpression><![CDATA[$F{payment_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="571" y="29" width="186" height="20" uuid="2418896c-61f7-4a81-a3ac-87683daf0015"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="29" width="100" height="20" uuid="af806574-6010-46e0-809a-fef3223039a6"/>
+				<textFieldExpression><![CDATA[$F{Qnt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
